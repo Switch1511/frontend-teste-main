@@ -1,21 +1,40 @@
-.item {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  flex-shrink: 0;
-}
-
 .wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 1px solid blue;
+  gap: 20px;
+
+  .item {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    flex-shrink: 0;
+  }
+
+  .blue {
+    background-color: blue;
+  }
+
+  .red {
+    background: red;
+  }
+
+  .black {
+    background-color: black;
+  }
 }
 
-.blue {
-  background-color: blue;
+@media (max-width: 1000px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 
-.red {
-  background: red;
-}
-
-.black {
-  background-color: black;
+@media (min-width: 1001px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
