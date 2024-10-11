@@ -1,24 +1,24 @@
-<form id="form">
+<form id="form" [formGroup]="form" (ngSubmit)="submitForm()">
     <mat-form-field appearance="fill">
         <mat-label>Nome</mat-label>
-        <input type="text" matInput placeholder="Digite algo">
+        <input type="text" matInput formControlName="nome" placeholder="Digite algo"  maxlength="50">
     </mat-form-field>
     <mat-form-field appearance="fill">
         <mat-label>Email</mat-label>
-        <input type="text" matInput placeholder="Digite algo">
+        <input type="text" matInput formControlName="email" placeholder="Digite algo" maxlength="50">
     </mat-form-field>
     <mat-form-field appearance="fill">
         <mat-label>Senha</mat-label>
-        <input type="text" matInput placeholder="Digite algo">
+        <input type="password" matInput formControlName="senha" placeholder="Digite algo" maxlength="25">
     </mat-form-field>
     <mat-form-field appearance="fill">
         <mat-label>CEP</mat-label>
-        <input type="text" matInput placeholder="Digite algo">
+        <input type="text" matInput formControlName="cep" placeholder="Digite algo" maxlength="9" (input)="formatCep($event)">
     </mat-form-field>
     <mat-form-field appearance="fill">
         <mat-label>Logradouro</mat-label>
-        <input type="text" matInput placeholder="Digite algo">
+        <input type="text" matInput formControlName="logradouro" placeholder="Digite algo"  maxlength="50">
     </mat-form-field>
-    <button mat-raised-button>Salvar</button>
+    <button mat-raised-button type="submit">Salvar</button>
     <button mat-raised-button matDialogClose>Cancelar</button>
 </form>

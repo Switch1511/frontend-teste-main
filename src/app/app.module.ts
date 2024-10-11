@@ -17,6 +17,8 @@ import { A14ScssFuncaoComponent } from './atividades/1 - HTML, SCSS, Typescript/
 import { A15ClasseComponent } from './atividades/1 - HTML, SCSS, Typescript/a1.5-classe/a1.5-classe.component';
 import { CrudComponent } from './atividades/2 - CRUD/crud.component';
 import { FormularioComponent } from './atividades/2 - CRUD/formulario/formulario.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { FormularioComponent } from './atividades/2 - CRUD/formulario/formulario
     BrowserAnimationsModule,
     MatInputModule,
     MatDialogModule,
+    MatPaginatorModule,
+    MatSortModule,
     // LoremModule,
   ],
   providers: [],
