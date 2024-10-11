@@ -1,5 +1,5 @@
 <div class="page-container">
-  <p>[ ] Crie uma função em scss que eu passe um nível de opacidade/tom da cor e ela me retorne o valor do background.
+  <p>[x] Crie uma função em scss que eu passe um nível de opacidade/tom da cor e ela me retorne o valor do background.
     Aplique um nível de cor para cada item.</p>
   <p>ex.: get-dark-bg(nivel)</p>
   <p>get-dark-bg(1) retorna rgba(0,0,0,.1)</p>
@@ -8,9 +8,6 @@
   <p>get-dark-bg(4) retorna rgba(0,0,0,.4)</p>
 
   <div class="wrapper">
-    <div class="item item1"></div>
-    <div class="item item2"></div>
-    <div class="item item3"></div>
-    <div class="item item4"></div>
+    <div *ngFor="let i of items; let index = index" class="item item{{ index + 1 }}"></div>
   </div>
 </div>
