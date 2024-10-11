@@ -4,8 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "set NODE_OPTIONS=--openssl-legacy-provider && gulp buildDev && ng serve ",
-    "publish": "set NODE_OPTIONS=--openssl-legacy-provider && gulp build && ng build --prod",
-    "build": "ng build",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && gulp build && ng build --prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
