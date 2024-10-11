@@ -1,20 +1,32 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-formulario',
   templateUrl: './formulario.component.html',
   styleUrls: ['./formulario.component.scss']
 })
-export class FormularioComponent implements OnInit {  
+export class FormularioComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   form = new FormGroup({
-    nome: new FormControl("Nome", []),
-    email: new FormControl("meuemail", []),
-    senha: new FormControl("password", []),
-    cep: new FormControl("", []),
+    nome: new FormControl('', [
+      Validators.required,
+      Validators.minLength(3),
+      Validators.maxLength(30)
+    ]),
+    email: new FormControl('', [
+      Validators.required,
+      Validators.email
+    ]),
+    senha: new FormControl('', [
+      Validators.required
+    ]),
+    cep: new FormControl('', [
+      Validators.required,
+      Validators.minLength(8)
+    ]),
     logradouro: new FormControl("", []),
   })
 
